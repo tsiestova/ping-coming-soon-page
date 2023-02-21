@@ -1,0 +1,150 @@
+@use "../styles/abstracts";
+@use "../styles/abstracts/functions" as media;
+@use "../styles/abstracts/colors" as colors;
+
+.header {
+  padding-top: 84px;
+  margin-bottom: 30px;
+}
+
+.logo__wrap {
+  width: 56px;
+  height: 24px;
+  margin: auto;
+
+  @include media.desktop {
+    width: 90px;
+    height: 39px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.main__container {
+  margin-bottom: 112px;
+
+  @include media.desktop {
+    margin-bottom: 72px;
+  }
+}
+
+.pic__containter {
+
+
+  @include media.desktop {
+    margin-bottom: 0;
+  }
+}
+
+.pic__containter_wrap {
+  width: 100%;
+  height: auto;
+  margin: auto;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.footer {
+  margin-bottom: 37px;
+
+  @include media.desktop {
+    padding-bottom: 49px;
+  }
+
+  .layout {
+
+  }
+
+}
+
+.social__media_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 27px;
+}
+
+.social__media_item {
+  width: 31px;
+  height: 31px;
+  border: 0.918357px solid rgba(76, 123, 243, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+  }
+
+  &.social__media_item__twitter {
+
+    &:before {
+      background: url("../assets/logo-twitter.png") no-repeat center center;
+    }
+  }
+
+  &.social__media_item__insta {
+
+    &:before {
+      background: url("../assets/logo-insta.png") no-repeat center center;
+    }
+  }
+
+  &.social__media_item__facebook {
+
+    &:before {
+      background: url("../assets/logo-facebook.png") no-repeat center center;
+    }
+  }
+
+
+  &:hover {
+    cursor: pointer;
+
+    &.social__media_item__twitter {
+      &:before {
+        background: #4C7BF3 url("../assets/twitter-logo-hover.png") no-repeat center center;
+      }
+    }
+
+
+    &.social__media_item__facebook {
+      &:before {
+        background: #4C7BF3 url("../assets/logo-facebook-hover.png") no-repeat center center;
+      }
+    }
+
+
+
+    &.social__media_item__insta {
+      &:before {
+        background: #4C7BF3 url("../assets/insta-logo-white.png") no-repeat center center;
+      }
+    }
+  }
+}
+
+.footer__copy {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  color: colors.$color1;
+  text-align: center;
+
+  @include media.desktop {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

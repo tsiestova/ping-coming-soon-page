@@ -2,18 +2,6 @@
 @use "../styles/abstracts/functions" as media;
 
 body {
-  font-family: abstracts.$font;
-  background: abstracts.$bg-color;
+  font-family: 'Libre Franklin', sans-serif;
 }
 
-.card__wrap {
-  background: abstracts.$bg-color url("../../public/img/bg-intro-mobile.png");
-  min-height: 100%;
-
-  @include media.tablet {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}

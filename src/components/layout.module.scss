@@ -1,0 +1,13 @@
+@use "../styles/abstracts";
+@use "../styles/abstracts/functions" as media;
+
+
+.layout {
+  padding: 0 23px;
+  max-width: 640px;
+  margin: auto;
+
+  @include media.desktop {
+    padding: 0;
+  }
+}
