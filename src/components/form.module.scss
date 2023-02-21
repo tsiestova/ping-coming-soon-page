@@ -42,7 +42,6 @@
   }
 }
 
-
 .form__wrap_description {
   font-weight: 300;
   font-size: 12px;
@@ -67,6 +66,11 @@
     gap: 16px;
   }
 
+  &.error {
+    .error__message {
+      display: inline-block;
+    }
+  }
 }
 
 .input__wrap {
@@ -80,7 +84,6 @@
 
   @include media.desktop {
     height: 56px;
-    //max-width: 421px;
     width: 100%;
   }
 
@@ -159,7 +162,7 @@
     height: 56px;
     max-width: 200px;
   }
-  
+
   &:hover {
     @include media.desktop {
       background-color: colors.$color9;
@@ -176,7 +179,7 @@
   color: colors.$color8;
   text-align: center;
   margin-bottom: 20px;
-  display: inline-block;
+  display: none;
 
   @include media.desktop {
     font-size: 12px;
